@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleLogWriter.cs" />
+    <Compile Include="FuzzyProcessor.cs" />
     <Compile Include="Models\OutputData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\airbus\FuzzySharp-master\FuzzySharp-master\FuzzySharp\FuzzySharp.csproj">
+      <Project>{56c0824a-7396-437f-8cb3-dbcc44e3499e}</Project>
+      <Name>FuzzySharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8134af29-d4a1-4131-a641-9546c8e03b84}</Project>
       <Name>Common</Name>

@@ -10,7 +10,9 @@ namespace Demo_Excel.Models
     {
         public string InstructionAddress { get; set; }
         public string Postcode { get; set; }
-        public string ResultData { get; set; }
+        public string Airbus_Fetched_Address { get; set; }
+        public string Matched_Address { get; set; }
+        public int Confidence_Ratio { get; set; }
     }
 
     public class SearchTerms
