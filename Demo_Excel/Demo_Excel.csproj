@@ -59,13 +59,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\airbus\FuzzySharp-master\FuzzySharp-master\FuzzySharp\FuzzySharp.csproj">
-      <Project>{56c0824a-7396-437f-8cb3-dbcc44e3499e}</Project>
-      <Name>FuzzySharp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8134af29-d4a1-4131-a641-9546c8e03b84}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FuzzySharp\FuzzySharp.csproj">
+      <Project>{fec3c18c-97f7-41d3-aeb6-3313abcb224b}</Project>
+      <Name>FuzzySharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
