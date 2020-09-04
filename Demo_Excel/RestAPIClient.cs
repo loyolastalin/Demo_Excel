@@ -17,10 +17,10 @@ namespace Demo_Excel
                 PropertyCode_Root data = GetContent<PropertyCode_Root>(propertyCodeUrl, propertyCode.ToString());
 
                 // Write values.
-                ConsoleLogWriter.WritelineMessage("--- WebClient result ---", ConsoleColor.DarkYellow);
+                ConsoleLogWriter.WritelineMessage($"--- WebClient for Property Code called with result of  {propertyCode}.", ConsoleColor.DarkYellow);
                 var address = data.address;
                 conent = $" Address : {address.road}  {address.town} {address.country} {address.postcode} \n PROPERTY NUMBER : {address.property_number} \n UPRN : {address.uprn} \n PROPERTY CODE {data.search_terms.property_code}";
-                ConsoleLogWriter.WritelineMessage(conent, ConsoleColor.Green);
+                //ConsoleLogWriter.WritelineMessage(conent, ConsoleColor.Green);
             }
 
             catch (Exception ex)
@@ -42,13 +42,14 @@ namespace Demo_Excel
                 Root postCodeData = GetContent<Root>(postCodeUrl, postCode);
 
                 // Write values.
-                ConsoleLogWriter.WritelineMessage("--- WebClient result ---", ConsoleColor.DarkYellow);
+                ConsoleLogWriter.WritelineMessage($"--- WebClient for post code return with result  {postCodeData.addresses.Count} records for {postCode}", ConsoleColor.DarkYellow);
                 foreach (var item in postCodeData.addresses)
                 {
                     // conent += item.full_address_string + "Property Code " + item.property_code + Environment.NewLine;
                     conent += $"{item.full_address_string} Property Code {item.property_code} \n";
                 }
-                ConsoleLogWriter.WritelineMessage(conent, ConsoleColor.Green);
+
+                // ConsoleLogWriter.WritelineMessage(conent, ConsoleColor.Green);
             }
             catch (Exception ex)
             {
